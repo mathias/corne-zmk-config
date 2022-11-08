@@ -15,10 +15,10 @@
 #define LOWER 4
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
+    keymap {
+        compatible = "zmk,keymap";
 
-                default_layer {
+            default_layer {
 // -------------------------------   --------------------------------
 // |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  ;  |
 // |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |
@@ -31,9 +31,9 @@
    &none &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &none
                   &kp LSHIFT &kp BSPC &mt LCTL ESC   &mt LALT RET &lt NAV SPACE &mo SYM
                         >;
-                };
+           };
 
-                sym_layer {
+           sym_layer {
 // -------------------------------   -------------------------------
 // |  !  |  @  |  |  |  {  |  }  |   |  _  |  7  |  8  |  9  |  *  |
 // | Tab |  $  | '"  |  (  |  )  |   |  -  |  4  |  5  |  6  | \|  |
@@ -46,9 +46,9 @@
    &none &kp PERCENT &kp CARET  &kp TILDE &kp LBKT &kp RBKT      &kp N0 &kp N1  &kp N2 &kp N3 &kp EQUAL &none
                   &kp LSHIFT &kp BSPC &mt LCTL ESC   &mt LALT RET &lt NAV SPACE &mo SYM
                         >;
-                };
+           };
 
-                nav_layer {
+           nav_layer {
 // -------------------------------   -------------------------------
 // | F9  | F10 | F11 | F12 |     |   | PGUP| HOME|  UP | END |VOLUP|
 // | F5  | F6  | F7  | F8  |     |   | PGDN| LEFT| DOWN| RGHT|VOLDN|
@@ -61,9 +61,9 @@
    &none &kp F1 &kp F2 &kp F3 &kp F4 &none     &kp C_PAUSE &kp K_PREV &kp K_PP &kp K_NEXT &kp K_MUTE &none
                   &kp LSHIFT &kp BSPC &mt LCTL ESC   &mt LALT RET &lt NAV SPACE &mo SYM
                         >;
-                };
+           };
 
-                qwerty_layer {
+           qwerty_layer {
 // -------------------------------   --------------------------------
 // |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |
 // |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |
@@ -76,9 +76,9 @@
    &none &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &none
                   &kp LSHIFT &kp BSPC &mt LCTL ESC   &mt LALT RET &lt NAV SPACE &mo SYM
                         >;
-                };
+           };
 
-                lower_layer {
+           lower_layer {
 // -------------------------------   -------------------------------
 // |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |
 // | BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |
@@ -91,13 +91,15 @@
    &none &bt BT_CLR   &bt BT_NXT   &bt BT_PRV   &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
                   &kp LSHIFT &kp BSPC &mt LCTL ESC   &mt LALT RET &trans &trans
                         >;
-                };
+           };
         };
+
         conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
+          compatible = "zmk,conditional-layers";
+          tri_layer {
             if-layers = <SYM NAV>;
             then-layer = <LOWER>;
+          };
         };
 
         behaviors {
@@ -109,7 +111,6 @@
             //quick-tap-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-          }
+          };
         };
-    };
-};
+  };
