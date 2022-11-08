@@ -27,7 +27,7 @@
 // Note that we have to set the outer cols &none because this is only a 3x5 keyboard
                         bindings = <
    &none &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI &none
-   &none &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp O    &none
+   &none &kp A &kp R &kp S &hm LCMD T &kp G   &kp M &hm LCMD N  &kp E     &kp I   &kp O    &none
    &none &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &none
                   &kp LSHIFT &kp BSPC &mt LCTL ESC   &mt LALT RET &lt NAV SPACE &mo SYM
                         >;
@@ -72,7 +72,7 @@
 // Note that we have to set the outer cols &none because this is only a 3x5 keyboard
                         bindings = <
    &none &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &none
-   &none &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &none
+   &none &kp A &kp S &kp D &hm LCMD F &kp G   &kp H &hm LCMD J  &kp K     &kp L   &kp SEMI &none
    &none &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &none
                   &kp LSHIFT &kp BSPC &mt LCTL ESC   &mt LALT RET &lt NAV SPACE &mo SYM
                         >;
@@ -98,6 +98,18 @@
         tri_layer {
             if-layers = <SYM NAV>;
             then-layer = <LOWER>;
+        };
+
+        behaviors {
+          hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            //binding-cells = <2>;
+            //tapping-term-ms = <200>;
+            //quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+          }
         };
     };
 };
