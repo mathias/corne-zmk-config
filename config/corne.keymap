@@ -88,8 +88,8 @@
 // Note that we have to set the outer cols &none because this is only a 3x5 keyboard
                         bindings = <
    &none &kp F9 &kp F10 &kp F11 &kp F12 &none  &kp PG_UP &kp N7   &kp N8 &kp N9    &kp N0 &none
-   &none &kp F5 &kp F6 &kp F7 &kp F8 &none     &kp PG_DN &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &none &kp F1 &kp F2 &kp F3 &kp F4 &trans    &trans    &trans   &trans &trans    &trans &trans
+   &none &kp F5 &kp F6 &kp F7 &kp F8 &none     &kp PG_DN &kp LEFT &kp DOWN &kp UP &kp RIGHT &none
+   &none &kp F1 &kp F2 &kp F3 &kp F4 &trans    &trans    &trans   &trans &trans    &trans &none
                   &kp LSHIFT &kp BSPC &mt LCTL ESC   &mt LALT RET &lt NAV SPACE &mo SYM
                         >;
                 };
