@@ -58,7 +58,7 @@
                         bindings = <
    &none &kp F9 &kp F10 &kp F11 &kp F12 &none  &kp PG_UP &kp HOME &kp UP   &kp END &kp K_VOL_UP &none
    &none &kp F5 &kp F6 &kp F7 &kp F8 &none     &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp K_VOL_DN   &none
-   &none &kp F1 &kp F2 &kp F3 &kp F4 &none     &kp C_PAUSE &kp K_PREV &K_PP &kp K_NEXT &kp K_MUTE &none
+   &none &kp F1 &kp F2 &kp F3 &kp F4 &none     &kp C_PAUSE &kp K_PREV &kp K_PP &kp K_NEXT &kp K_MUTE &none
                   &kp LSHIFT &kp BSPC &mt LCTL ESC   &mt LALT RET &lt NAV SPACE &mo SYM
                         >;
                 };
